@@ -29,7 +29,7 @@ public class SearchFlightStepDefinitions {
 
     @When("^Daniel enters departure (.*) and destination (.*)$")
     public void searchFlights(String departure, String destination) {
-        theActorInTheSpotlight().attemptsTo(new SearchFlight(new Flight(departure, destination)));
+        theActorInTheSpotlight().attemptsTo(SearchFlight.with(new Flight(departure, destination)));
 
     }
 

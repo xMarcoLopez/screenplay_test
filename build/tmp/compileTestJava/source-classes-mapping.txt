@@ -1,2 +1,4 @@
 com/vivaair/screenplay/runners/SearchFlight.java
  com.vivaair.screenplay.runners.SearchFlight
+com/vivaair/screenplay/stepdefinitions/SearchFlightStepDefinitions.java
+ com.vivaair.screenplay.stepdefinitions.SearchFlightStepDefinitions

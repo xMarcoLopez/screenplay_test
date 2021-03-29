@@ -5,6 +5,8 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.actions.JavaScriptClick;
+import org.openqa.selenium.Keys;
 
 import static com.vivaair.screenplay.userinterface.SearchFlightPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
@@ -21,10 +23,10 @@ public class SearchFlight implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Click.on(ONE_WAY_CHECKBOX),
-                Enter.theValue(flight.getDeparture()).into(DEPARTURE_FIELD),
-                Enter.theValue(flight.getDestination()).into(DESTINATION_FIELD),
+                Enter.theValue(flight.getDeparture()).into(DEPARTURE_FIELD).thenHit(Keys.ENTER),
+                Enter.theValue(flight.getDestination()).into(DESTINATION_FIELD).thenHit(Keys.ENTER),
                 Click.on(CALENDAR),
-                Click.on(DEPARTURE_DATE.of(flight.getDepartureDate())),
+                JavaScriptClick.on(DEPARTURE_DATE.of(flight.getDepartureDate())),
                 Click.on(SEARCH_BUTTON)
         );
     }
