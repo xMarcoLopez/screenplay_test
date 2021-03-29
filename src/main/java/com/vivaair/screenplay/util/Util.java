@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -53,9 +54,13 @@ public class Util {
 
     public static WebElementFacade getCheapestFlight(List<WebElementFacade> flightPrices){
         List<Integer> flightPricesCOP = null;
+        Integer cheapestFlight = null;
+        WebElementFacade cheapestFlightElement;
         List<String> textFlightPrices = getTextList(flightPrices);
         textFlightPrices = removeCharacters(textFlightPrices);
-
-       return null;
+        flightPricesCOP = convertStringListToIntegerList(textFlightPrices);
+        cheapestFlight = Collections.min(flightPricesCOP);
+        cheapestFlightElement = flightPrices.get(flightPricesCOP.indexOf(cheapestFlight));
+       return cheapestFlightElement;
     }
 }
