@@ -7,15 +7,20 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.JavaScriptClick;
+import net.serenitybdd.screenplay.actions.MoveMouse;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
+import static com.vivaair.screenplay.userinterface.ExtrasPage.NO_THANKS_SEAT_BUTTON;
 import static com.vivaair.screenplay.userinterface.FlightResultPage.A_LA_CARTA_BUTTON;
 import static com.vivaair.screenplay.userinterface.FlightResultPage.CONTINUE_BUTTON;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class SelectAFlight implements Task {
     private List<WebElement> flights;
@@ -35,8 +40,11 @@ public class SelectAFlight implements Task {
         WebElement cheapestFlightElement = Util.getCheapestFlight(flights);
         cheapestFlightElement.click();
         actor.attemptsTo(
+                WaitUntil.the(A_LA_CARTA_BUTTON, isVisible()),
+                MoveMouse.to(A_LA_CARTA_BUTTON),
                 Click.on(A_LA_CARTA_BUTTON),
-                Click.on(CONTINUE_BUTTON)
+                JavaScriptClick.on(CONTINUE_BUTTON),
+                WaitUntil.the(NO_THANKS_SEAT_BUTTON, isVisible()).forNoMoreThan(5).seconds()
         );
     }
 

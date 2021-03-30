@@ -154,7 +154,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 30-03-2021 10:02</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 30-03-2021 12:05</span>
     <br style="clear:left"/>
 </div>
 
@@ -191,9 +191,9 @@ TO pick a flight
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='far fa-stop-circle pending-icon fa-2x' title='PENDING'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="pending-color">Search for the cheapest and one way flight  with departure Medellin and destination Bogota
+                                <span class="error-color">Search for the cheapest and one way flight  with departure Medellin and destination Bogota
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -210,33 +210,75 @@ TO pick a flight
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Element click intercepted exception: element click intercepted: Element (button data-v-48db7256='' type='button' id='5EIylga7' class='button' style='background-color: rgb(255, 255, 255); color: rgb(4, 16, 127); border: none; height: auto; padding: 6px 6px 6px 0px; font-size: 15px; text-shadow: none;')...(/button) is not clickable at point (853, 526). Other element would receive the click: (div class='v--modal-background-click')...(/div)</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>org.openqa.selenium.ElementClickInterceptedException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.vivaair.screenplay.tasks.PickTheExtras.performAs(PickTheExtras.java:16)<br />com.vivaair.screenplay.stepdefinitions.SearchFlightStepDefinitions.searchFlights(SearchFlightStepDefinitions.java:36)<br />cucumber.runner.Runner.runPickle(Runner.java:80)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource1897627131655737461.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="e7cb3c4cde7eb1fd708c94a9bffe6a16e06fa7b05ac0177eb35bcbcb853fca89.png" title=" Given Daniel wants to search for flights" width="1920"/>
-                <img src="e7cb3c4cde7eb1fd708c94a9bffe6a16e06fa7b05ac0177eb35bcbcb853fca89.png" title=" Daniel opens the https://vivaair.com" width="1920"/>
-                <img src="e7cb3c4cde7eb1fd708c94a9bffe6a16e06fa7b05ac0177eb35bcbcb853fca89.png" title=" Given Daniel wants to search for flights (completed)" width="1920"/>
-                <img src="2167ff17bbe26fe3528ae013cf8180d507eebb09cfdccdfd61ae71a6cd78173e.png" title=" When Daniel enters departure Medellin and destination Bogota" width="1920"/>
+                <img src="72f407af5b8e76f933b311ecd94f4f2a41d59ab11899b1a20b110f091601b8f3.png" title=" Given Daniel wants to search for flights" width="1920"/>
+                <img src="72f407af5b8e76f933b311ecd94f4f2a41d59ab11899b1a20b110f091601b8f3.png" title=" Daniel opens the https://vivaair.com" width="1920"/>
+                <img src="72f407af5b8e76f933b311ecd94f4f2a41d59ab11899b1a20b110f091601b8f3.png" title=" Given Daniel wants to search for flights (completed)" width="1920"/>
+                <img src="72f407af5b8e76f933b311ecd94f4f2a41d59ab11899b1a20b110f091601b8f3.png" title=" When Daniel enters departure Medellin and destination Bogota" width="1920"/>
                 <img src="2167ff17bbe26fe3528ae013cf8180d507eebb09cfdccdfd61ae71a6cd78173e.png" title=" Daniel search a flight" width="1920"/>
                 <img src="2167ff17bbe26fe3528ae013cf8180d507eebb09cfdccdfd61ae71a6cd78173e.png" title=" Daniel clicks on One way checkbox" width="1920"/>
                 <img src="2167ff17bbe26fe3528ae013cf8180d507eebb09cfdccdfd61ae71a6cd78173e.png" title=" Daniel enters 'Medellin' then hits [ENTER] into Departure" width="1920"/>
-                <img src="c5d906f40b0a5d7b5551579b21dc609d959b8d152935da424366ed4c2d884f6a.png" title=" Daniel enters 'Medellin' then hits [ENTER] into Departure (completed)" width="1920"/>
-                <img src="c5d906f40b0a5d7b5551579b21dc609d959b8d152935da424366ed4c2d884f6a.png" title=" Daniel enters 'Bogota' then hits [ENTER] into Destination" width="1920"/>
-                <img src="023a4ac51ace3fb40acc6cff0f0e435e1a56d5fc6891b8d396ec45ff69466324.png" title=" Daniel enters 'Bogota' then hits [ENTER] into Destination (completed)" width="1920"/>
-                <img src="023a4ac51ace3fb40acc6cff0f0e435e1a56d5fc6891b8d396ec45ff69466324.png" title=" Daniel clicks on Calendar" width="1920"/>
-                <img src="07fdf1f1168722a7ba2d93cdd2db1ef6744d3e7acfc57f3c437aa3cb379f5eb7.png" title=" Daniel clicks on Calendar (completed)" width="1920"/>
-                <img src="07fdf1f1168722a7ba2d93cdd2db1ef6744d3e7acfc57f3c437aa3cb379f5eb7.png" title=" Daniel clicks on Departure date" width="1920"/>
-                <img src="e4cdedc7bedbf3781086a6411d9aaed705dab6106c463ee6958b4d7f54e1a31f.png" title=" Daniel clicks on Departure date (completed)" width="1920"/>
-                <img src="e4cdedc7bedbf3781086a6411d9aaed705dab6106c463ee6958b4d7f54e1a31f.png" title=" Daniel clicks on Search button" width="1920"/>
-                <img src="88c86382856dac2ae9f05ae8f1c2f6f9896d6a3e3b441bae1fa02f45dec2447d.png" title=" Daniel clicks on Search button (completed)" width="1920"/>
-                <img src="88c86382856dac2ae9f05ae8f1c2f6f9896d6a3e3b441bae1fa02f45dec2447d.png" title=" Daniel search a flight (completed)" width="1920"/>
-                <img src="88c86382856dac2ae9f05ae8f1c2f6f9896d6a3e3b441bae1fa02f45dec2447d.png" title=" Daniel select a flight" width="1920"/>
-                <img src="835b5cb166c09a149894d7b346684d28ce9aaaec4bad5352695a6b1fda2923f5.png" title=" Daniel clicks on A la carta button" width="1920"/>
-                <img src="4442a122442022cb2eb1f414b8e4a8daaa977cec68bec81f1531702c47a6ca24.png" title=" Daniel clicks on A la carta button (completed)" width="1920"/>
-                <img src="4442a122442022cb2eb1f414b8e4a8daaa977cec68bec81f1531702c47a6ca24.png" title=" Daniel clicks on Continue button" width="1920"/>
-                <img src="9209398aa4e0cf7b6842730acc0fd86dc3d128eab4ddbf1bcdfb554c1d2fb845.png" title=" Daniel clicks on Continue button (completed)" width="1920"/>
-                <img src="9209398aa4e0cf7b6842730acc0fd86dc3d128eab4ddbf1bcdfb554c1d2fb845.png" title=" Daniel select a flight (completed)" width="1920"/>
-                <img src="9209398aa4e0cf7b6842730acc0fd86dc3d128eab4ddbf1bcdfb554c1d2fb845.png" title=" When Daniel enters departure Medellin and destination Bogota (completed)" width="1920"/>
-                <img src="9209398aa4e0cf7b6842730acc0fd86dc3d128eab4ddbf1bcdfb554c1d2fb845.png" title=" Then Daniel should pick the cheapest flight: <span class='pending-color'>PENDING</span>" width="1920"/>
+                <img src="80f780f87caf74dd96d276a3d43032a9fdf7e678698913a417ec8fcfe0ca7427.png" title=" Daniel enters 'Medellin' then hits [ENTER] into Departure (completed)" width="1920"/>
+                <img src="80f780f87caf74dd96d276a3d43032a9fdf7e678698913a417ec8fcfe0ca7427.png" title=" Daniel enters 'Bogota' then hits [ENTER] into Destination" width="1920"/>
+                <img src="ff0c238c440e3ae890759fc5581464166793685d8cb4b82c41286944c7e345ce.png" title=" Daniel enters 'Bogota' then hits [ENTER] into Destination (completed)" width="1920"/>
+                <img src="ff0c238c440e3ae890759fc5581464166793685d8cb4b82c41286944c7e345ce.png" title=" Daniel clicks on Calendar" width="1920"/>
+                <img src="44f3e04b27af5675068d7000a3b4b3cbe5ef06f4aa0c0099bdb869e209c38979.png" title=" Daniel clicks on Calendar (completed)" width="1920"/>
+                <img src="44f3e04b27af5675068d7000a3b4b3cbe5ef06f4aa0c0099bdb869e209c38979.png" title=" Daniel clicks on Departure date" width="1920"/>
+                <img src="3407d6e748410c1af42369c94fdbbd9845f1d2e730d2eeb237ed31eefe2dded5.png" title=" Daniel clicks on Departure date (completed)" width="1920"/>
+                <img src="3407d6e748410c1af42369c94fdbbd9845f1d2e730d2eeb237ed31eefe2dded5.png" title=" Daniel clicks on Search button" width="1920"/>
+                <img src="e9a94057b5dc864421e5ca7bc5c49bea8c56579d895f511be6eec0b21df4e8b2.png" title=" Daniel clicks on Search button (completed)" width="1920"/>
+                <img src="e9a94057b5dc864421e5ca7bc5c49bea8c56579d895f511be6eec0b21df4e8b2.png" title=" Daniel search a flight (completed)" width="1920"/>
+                <img src="dc35e04647805bf3882b92ada986c2475e3dcc71b5f49ac07d1fff168972083c.png" title=" Daniel select a flight" width="1920"/>
+                <img src="93f38dcac9e7a51f76c1c93d919b3c3b0c9992e35d36761b83fed77b79d56751.png" title=" Daniel clicks on A la carta button" width="1920"/>
+                <img src="c026d3829b390ed55d4d8d81d5c9c8ffa0a328102c223983950e45a4f1f067f5.png" title=" Daniel clicks on A la carta button (completed)" width="1920"/>
+                <img src="c026d3829b390ed55d4d8d81d5c9c8ffa0a328102c223983950e45a4f1f067f5.png" title=" Daniel clicks on Continue button" width="1920"/>
+                <img src="f269a3fc34793a164b48ebc17305d09449f2fffe2d27ab1c6ac8913b626c8bfe.png" title=" Daniel clicks on Continue button (completed)" width="1920"/>
+                <img src="6fb9a79cf99924784f28f8eb6d2985857ea4b8b7dbcc341db8d54d82ce89cb08.png" title=" Daniel select a flight (completed)" width="1920"/>
+                <img src="6fb9a79cf99924784f28f8eb6d2985857ea4b8b7dbcc341db8d54d82ce89cb08.png" title=" Daniel pick the extras" width="1920"/>
+                <img src="121ec26bba7919fb0afc074b3c8a42b6b36a540c0bdaefac60f771bf2e9d8df7.png" title=" Daniel clicks on No thanks seat button" width="1920"/>
+                <img src="5c208f949634bd8de55188a532e1ba719c0b4461c88636cef798534ce85b3019.png" title=" Daniel clicks on No thanks seat button (completed)" width="1920"/>
+                <img src="5c208f949634bd8de55188a532e1ba719c0b4461c88636cef798534ce85b3019.png" title=" Daniel clicks on Confirm no seat button" width="1920"/>
+                <img src="5c208f949634bd8de55188a532e1ba719c0b4461c88636cef798534ce85b3019.png" title=" Daniel clicks on Confirm no seat button (completed): <span class='error-color'>ERROR</span>" width="1920"/>
             </div>
         </div>
 

@@ -12,5 +12,7 @@ com/vivaair/screenplay/userinterface/ExtrasPage.java
  com.vivaair.screenplay.userinterface.ExtrasPage
 com/vivaair/screenplay/userinterface/FlightResultPage.java
  com.vivaair.screenplay.userinterface.FlightResultPage
+com/vivaair/screenplay/tasks/PickTheExtras.java
+ com.vivaair.screenplay.tasks.PickTheExtras
 com/vivaair/screenplay/tasks/SelectAFlight.java
  com.vivaair.screenplay.tasks.SelectAFlight

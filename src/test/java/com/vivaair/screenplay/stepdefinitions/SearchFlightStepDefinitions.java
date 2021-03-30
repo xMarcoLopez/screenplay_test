@@ -1,6 +1,7 @@
 package com.vivaair.screenplay.stepdefinitions;
 
 import com.vivaair.screenplay.model.Flight;
+import com.vivaair.screenplay.tasks.PickTheExtras;
 import com.vivaair.screenplay.tasks.SearchAFlight;
 import com.vivaair.screenplay.tasks.SelectAFlight;
 import cucumber.api.PendingException;
@@ -32,7 +33,7 @@ public class SearchFlightStepDefinitions {
     public void searchFlights(String departure, String destination) {
         theActorInTheSpotlight().attemptsTo(SearchAFlight.with(new Flight(departure, destination)));
         theActorInTheSpotlight().attemptsTo(SelectAFlight.betweenTheResults());
-
+        theActorInTheSpotlight().attemptsTo(PickTheExtras.inTheExtrasPage());
     }
 
     @Then("^Daniel should pick the cheapest flight$")
