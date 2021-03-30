@@ -11,11 +11,11 @@ import org.openqa.selenium.Keys;
 import static com.vivaair.screenplay.userinterface.SearchFlightPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class SearchFlight implements Task {
+public class SearchAFlight implements Task {
 
     private Flight flight;
 
-    public SearchFlight(Flight flight) {
+    public SearchAFlight(Flight flight) {
         this.flight = flight;
     }
 
@@ -31,7 +31,7 @@ public class SearchFlight implements Task {
         );
     }
 
-    public static SearchFlight with(Flight flight){
-        return instrumented(SearchFlight.class, flight);
+    public static SearchAFlight with(Flight flight){
+        return instrumented(SearchAFlight.class, flight);
     }
 }

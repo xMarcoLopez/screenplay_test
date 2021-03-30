@@ -1,7 +1,8 @@
 package com.vivaair.screenplay.stepdefinitions;
 
 import com.vivaair.screenplay.model.Flight;
-import com.vivaair.screenplay.tasks.SearchFlight;
+import com.vivaair.screenplay.tasks.SearchAFlight;
+import com.vivaair.screenplay.tasks.SelectAFlight;
 import cucumber.api.PendingException;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -29,7 +30,8 @@ public class SearchFlightStepDefinitions {
 
     @When("^Daniel enters departure (.*) and destination (.*)$")
     public void searchFlights(String departure, String destination) {
-        theActorInTheSpotlight().attemptsTo(SearchFlight.with(new Flight(departure, destination)));
+        theActorInTheSpotlight().attemptsTo(SearchAFlight.with(new Flight(departure, destination)));
+        theActorInTheSpotlight().attemptsTo(SelectAFlight.betweenTheResults());
 
     }
 

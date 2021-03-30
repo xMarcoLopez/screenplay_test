@@ -1,6 +1,7 @@
 package com.vivaair.screenplay.util;
 
 import net.serenitybdd.core.pages.WebElementFacade;
+import org.openqa.selenium.WebElement;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -20,10 +21,10 @@ public class Util {
         return date;
     }
 
-    public static List<String> getTextList(List<WebElementFacade> list){
+    public static List<String> getTextList(List<WebElement> list){
         List <String> textList = new ArrayList<String>();
-        for (WebElementFacade webElementFacade : list){
-            textList.add(webElementFacade.getText());
+        for (WebElement webElement : list){
+            textList.add(webElement.getText());
         }
         return textList;
     }
@@ -52,10 +53,10 @@ public class Util {
         return newList;
     }
 
-    public static WebElementFacade getCheapestFlight(List<WebElementFacade> flightPrices){
+    public static WebElement getCheapestFlight(List<WebElement> flightPrices){
         List<Integer> flightPricesCOP = null;
         Integer cheapestFlight = null;
-        WebElementFacade cheapestFlightElement;
+        WebElement cheapestFlightElement;
         List<String> textFlightPrices = getTextList(flightPrices);
         textFlightPrices = removeCharacters(textFlightPrices);
         flightPricesCOP = convertStringListToIntegerList(textFlightPrices);

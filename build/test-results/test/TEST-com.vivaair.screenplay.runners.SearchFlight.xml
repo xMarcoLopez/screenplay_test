@@ -4,10 +4,10 @@
   <system-out><![CDATA[
 1 Scenarios (?[33m1 pending?[0m)
 3 Steps (?[33m1 pending?[0m, ?[32m2 passed?[0m)
-0m25.059s
+0m33.305s
 
 cucumber.api.PendingException: TODO: implement me
-	at com.vivaair.screenplay.stepdefinitions.SearchFlightStepDefinitions.shouldSeeTheExtrasPage(SearchFlightStepDefinitions.java:39)
+	at com.vivaair.screenplay.stepdefinitions.SearchFlightStepDefinitions.shouldSeeTheExtrasPage(SearchFlightStepDefinitions.java:41)
 	at ?.Daniel should pick the cheapest flight(src/test/resources/features/search_flights.feature:9)
 
 ]]></system-out>
